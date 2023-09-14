@@ -13,7 +13,7 @@ class Solution(object):
                 return isp(x[1:lx-1])
             else:
                 return False
-        
-        return isp(str(x))
+        x = str(x)
+        return x == x[::-1]
             
         

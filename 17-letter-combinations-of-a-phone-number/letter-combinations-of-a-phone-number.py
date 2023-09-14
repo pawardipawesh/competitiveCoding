@@ -4,17 +4,6 @@ class Solution(object):
         :type digits: str
         :rtype: List[str]
         """
-        d = {
-            "2":3,
-            "3":3,
-            "4":3,
-            "5":3,
-            "6":3,
-            "7":4,
-            "8":3,
-            "9":4
-        }
-
         sd = {
             "2":"abc",
             "3":"def",
@@ -35,10 +24,10 @@ class Solution(object):
         nr = [1]*(nd)
         for i, digit in enumerate(digits[::-1]):
             nr[nd -1 - i] = np
-            np *= 1 if digit not in d else d[digit]
+            np *= 1 if digit not in sd else len(sd[digit])
         
-        list_to_return = [""] * np
 
+        list_to_return = [""] * np
         for i, digit in enumerate(digits):
             s = sd[digit] if digit in sd else ''
             j = 0

@@ -37,9 +37,6 @@ class Solution(object):
             nr[nd -1 - i] = np
             np *= 1 if digit not in d else d[digit]
         
-        print('np', np)
-        print('nr', nr)
-        
         list_to_return = [""] * np
 
         for i, digit in enumerate(digits):

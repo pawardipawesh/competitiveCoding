@@ -9,13 +9,17 @@ class Solution:
                         # print('rs: ', rs)
                         return True
                     
-                    issp_l = []
+                    allrp_segmentable = True
                     for w in rs:
-                        is_sp = is_segmentable(w, word_dict)
-                        issp_l.append(is_sp)
+                        if not is_segmentable(w, word_dict):
+                            allrp_segmentable = False
+                            break
+                        # issp_l.append(is_sp)
                     
                     # iss_l.append(all(issp_l))
-                    if all(issp_l):
+                    # if all(issp_l):
+                    #     return True
+                    if allrp_segmentable:
                         return True
             return False
             # return any(iss_l)

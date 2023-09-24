@@ -17,14 +17,13 @@ class Solution:
             if char not in sc:
                 return False
             
-            if char in sc:
-                sc[char] -= 1
+            sc[char] -= 1
 
-                if sc[char] < 0:
-                    return False
+            if sc[char] < 0:
+                return False
         
         sum_sc = sum(sc.values())
-        if sum_sc > 0 or sum_sc < 0:
+        if sum_sc > 0:
             return False
         
         return True

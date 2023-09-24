@@ -23,8 +23,7 @@ class Solution:
             if sc[char] < 0:
                 return False
         
-        sum_sc = sum(sc.values())
-        if sum_sc > 0:
+        if sum(sc.values()) > 0:
             return False
         
         return True

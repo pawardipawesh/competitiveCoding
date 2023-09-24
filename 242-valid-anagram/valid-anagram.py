@@ -6,12 +6,13 @@ class Solution:
         if ls != lt:
             return False
         
-        sc = Counter(s)
-        # for char in s:
-        #     if char not in sc:
-        #         sc[char] = 1
-        #     else:
-        #         sc[char] += 1
+        # sc = Counter(s)
+        sc = {}
+        for char in s:
+            if char not in sc:
+                sc[char] = 1
+            else:
+                sc[char] += 1
         
         for char in t:
             if char not in sc:

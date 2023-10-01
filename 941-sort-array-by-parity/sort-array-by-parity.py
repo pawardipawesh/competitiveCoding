@@ -14,9 +14,14 @@ class Solution:
             if i > j:
                 break
             
-            tmp = nums[i]
-            nums[i] = nums[j]
-            nums[j] = tmp
+            # tmp = nums[i]
+            # nums[i] = nums[j]
+            # nums[j] = tmp
+            
+            nums[i] += nums[j]
+            nums[j] = nums[i] - nums[j]
+            nums[i] -= nums[j]
+
             i += 1
             j -= 1
         
